@@ -1,0 +1,95 @@
+.rose {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  transform-origin: center center;
+  &__wrapper {
+    position: relative;
+    width: 30%;
+    height: 30%;
+  }
+  &__petal {
+    width: 50px;
+    height: 50px;
+    background: #fe7696;
+    border-radius: 0px 50%;
+    position: absolute;
+    box-shadow: 0 0 10px #d1123f;
+    z-index: 2;
+    transform-origin: bottom right;
+    animation: petal2 10s infinite;
+
+    &:nth-child(2) {
+      transform-origin: right bottom;
+      transform: rotate(90deg);
+      background: #fe7696;
+      left: -10px;
+      animation: petal1 10s infinite;
+    }
+
+    &:nth-child(3) {
+      width: 40px;
+      height: 40px;
+      left: 10px;
+      top: -20px;
+      z-index: 1;
+      background: #f03a64;
+      transform-origin: bottom right;
+      animation: petal2 10s infinite;
+    }
+
+    &:nth-child(4) {
+      transform: rotate(90deg);
+      width: 40px;
+      height: 40px;
+      left: 0px;
+      top: -20px;
+      z-index: 1;
+      background: #f03a64;
+      transform-origin: bottom right;
+      animation: petal1 10s infinite;
+    }
+
+    &:nth-child(5) {
+      width: 50px;
+      height: 50px;
+      border-radius: 20px;
+      left: 20px;
+      top: -30px;
+      z-index: 0;
+      background: #d1123f;
+    }
+  }
+  &__leaf {
+    position: absolute;
+    top: 120px;
+    left: -115px;
+  }
+
+  &__stem {
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 8px solid #8ac78a;
+    border-color: #77a377 transparent transparent transparent;
+    transform: rotate(90deg) translateY(-43px);
+  }
+
+  &__leafs {
+    width: 50px;
+    height: 40px;
+    border-radius: 0px 50%;
+    background: #77a377;
+    position: absolute;
+    top: 0;
+    left: 110px;
+    z-index: 49;
+    transform-origin: right center;
+    &:nth-child(2) {
+      transform: rotateY(180deg);
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.heart-burst {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.burst-heart {
+  position: absolute;
+  font-size: 1.5rem;
+  animation: burst 1s ease-out forwards;
+
+  @keyframes burst {
+    0% {
+      transform: translate(0, 0) rotate(0deg) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(var(--x), var(--y)) rotate(var(--rotation))
+        scale(var(--scale));
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.welcome-letter {
+  width: 40%;
+  cursor: pointer;
+  position: relative;
+  margin: 70vh auto 0;
+  z-index: 5;
+  animation: float 3s linear infinite;
+
+  &__wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: $purple-gradient;
+    animation: gradientMove 8s ease infinite;
+    background-size: 300% 300%;
+    z-index: 0;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: re(24);
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    font-size: re(24);
+    line-height: 150%;
+    text-align: center;
+    color: $color-on-purple;
+    animation: heartBreath 1.5s linear infinite;
+  }
+}
