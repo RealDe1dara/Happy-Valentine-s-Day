@@ -48,11 +48,11 @@
     line-height: 150%;
     animation: titleFloat 3s ease-in-out infinite;
     text-align: center;
-    @media screen and (max-width: $bp-mobile) {
+    @media screen and (max-width: $bp-tablet) {
       font-size: re(40);
     }
-    @media screen and (max-width: $bp-tablet) {
-      font-size: re(50);
+    @media screen and (max-width: $bp-mobile) {
+      font-size: re(35);
     }
   }
 
@@ -61,11 +61,11 @@
     line-height: 150%;
     font-weight: 500;
     font-size: re(34);
-    @media screen and (max-width: $bp-mobile) {
-      font-size: re(20);
-    }
     @media screen and (max-width: $bp-tablet) {
       font-size: re(25);
+    }
+    @media screen and (max-width: $bp-mobile) {
+      font-size: re(20);
     }
   }
 

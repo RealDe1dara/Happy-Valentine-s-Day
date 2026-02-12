@@ -22,8 +22,8 @@ const GreetingCard = ({ onOpenMemories, onOpenBouquet }: GreetingCardProps) => {
   };
 
   return (
-    <div className="greeting__wrapper">
-      <section className="greeting">
+    <div className="greeting">
+      <section className="greeting__wrapper">
         <div className="greeting__header">
           <h2 className="greeting__title">З Днем святого Валентина!</h2>
           <div className="greeting__subtitle">

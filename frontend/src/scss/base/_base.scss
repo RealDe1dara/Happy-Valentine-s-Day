@@ -29,6 +29,9 @@ button {
   &:active {
     transform: translateY(0);
   }
+  @media screen and (max-width: $bp-mobile) {
+    font-size: re(12);
+  }
 }
 
 .button-full {
@@ -51,5 +54,3 @@ button {
     background-color: rgba(255, 255, 255, 0.1);
   }
 }
-
-  

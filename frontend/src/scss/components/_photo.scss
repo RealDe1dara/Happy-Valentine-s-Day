@@ -79,5 +79,11 @@
   &__caption {
     font-weight: 600;
     font-size: re(24);
+    @media screen and (max-width: $bp-tablet) {
+      font-size: re(22);
+    }
+    @media screen and (max-width: $bp-mobile) {
+      font-size: re(18);
+    }
   }
 }

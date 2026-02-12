@@ -1,33 +1,53 @@
 .greeting {
-  background-color: $primary-light-accent;
-  max-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  gap: min(re(40), 5vh);
-  max-width: re(700);
-  font-size: re(20);
-  @media screen and (max-width: $bp-tablet) {
-    max-width: 80vw;
-  }
-  line-height: 150%;
+  position: absolute;
   width: 100%;
-  margin: 10vh auto 0;
-  box-shadow:
-    0 25px 80px rgba(0, 0, 0, 0.2),
-    inset 0 0 80px rgba(255, 255, 255, 0.1);
-  border-radius: 30px;
-  padding: re(50);
-  text-align: center;
-  animation: fadeIn 1.5s linear forwards;
+  height: 100%;
+  background: $dark-red-gradient;
+  background-size: 300% 300%;
+  animation: gradientMove 6s ease infinite;
   &__wrapper {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: $dark-red-gradient;
-    background-size: 300% 300%;
-    animation: gradientMove 6s ease infinite;
+    background-color: $primary-light-accent;
+    max-height: 80vh;
+    margin: 10vh auto 0;
+
+    overflow-y: auto;
+    scrollbar-width: none; // Firefox
+    -ms-overflow-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: min(re(40), 5vh);
+    max-width: 50%;
+    font-size: re(20);
+    // @media screen and (min-width: $bp-desktop) {
+    //   margin: 10vh auto 0;
+    // }
+    @media screen and (max-width: $bp-desktop-small) {
+      max-width: 70%;
+      max-height: 90vh;
+      margin: 7vh auto 0;
+    }
+    @media screen and (max-width: $bp-tablet) {
+      max-width: 80%;
+      margin: 5vh auto;
+    }
+    @media screen and (max-width: $bp-mobile) {
+      max-width: 90%;
+      margin: 5vh auto;
+    }
+    line-height: 150%;
+    // width: 100%;
+    box-shadow:
+      0 25px 80px rgba(0, 0, 0, 0.2),
+      inset 0 0 80px rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: re(40);
+    text-align: center;
+    animation: fadeIn 1.5s linear forwards;
+    &::-webkit-scrollbar {
+      display: none; // Chrome, Safari, Edge
+    }
   }
 
   &__header {
@@ -61,6 +81,12 @@
     font-family: $font-accent-big;
     font-weight: 600;
     animation: gradientMove 6s ease infinite;
+    @media screen and (max-width: $bp-tablet) {
+      font-size: re(46);
+    }
+    @media screen and (max-width: $bp-mobile) {
+      font-size: re(36);
+    }
   }
   &__subtitle {
     display: flex;
@@ -70,6 +96,12 @@
       display: inline;
       font-size: re(40);
       animation: heartBreath 1s ease-in-out infinite;
+      @media screen and (max-width: $bp-tablet) {
+        font-size: re(35);
+      }
+      @media screen and (max-width: $bp-mobile) {
+        font-size: re(30);
+      }
     }
     &__line {
       width: 30%;
@@ -97,11 +129,21 @@
   }
   &__text {
     font-size: re(22);
-
+    @media screen and (max-width: $bp-tablet) {
+      font-size: re(22);
+    }
+    @media screen and (max-width: $bp-mobile) {
+      font-size: re(18);
+    }
     &-title {
       font-size: re(30);
       font-family: $font-default;
-
+      @media screen and (max-width: $bp-tablet) {
+        font-size: re(25);
+      }
+      @media screen and (max-width: $bp-mobile) {
+        font-size: re(20);
+      }
       & span {
         font-weight: 600;
         background: $gold-gradient;
@@ -117,6 +159,7 @@
     flex-direction: column;
 
     gap: re(10);
+
     &::before {
       content: "💘";
       position: absolute;
@@ -148,7 +191,9 @@
     opacity: 0;
     transform: translateY(20px);
     animation: textAppears 0.6s 2.5s ease forwards;
-
+    @media screen and (max-width: $bp-mobile) {
+      font-size: re(15);
+    }
     &::before {
       content: "⭐";
       position: absolute;
